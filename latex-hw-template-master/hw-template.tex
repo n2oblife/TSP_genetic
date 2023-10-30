@@ -1,0 +1,172 @@
+\documentclass[11pt]{exam}
+\newcommand{\myname}{Kanit, Scistri, Tranchant}
+\newcommand{\myhwtype}{Condition de résolution}
+
+\newcommand{\mysection}{Z}
+
+% Prefix for numedquestion's
+\newcommand{\questiontype}{Question}
+
+% Use this if your "written" questions are all under one section
+% For example, if the homework handout has Section 5: Written Questions
+% and all questions are 5.1, 5.2, 5.3, etc. set this to 5
+% Use for 0 no prefix. Redefine as needed per-question.
+\newcommand{\writtensection}{0}
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb}  % Some math symbols
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+\usepackage{wrapfig}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{centernot}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\card}{\vert}{\vert}
+
+% Uncomment the following line to get Solarized-themed source listings
+% You will have had to already installed the solarized-light package
+% https://github.com/jez/latex-solarized
+%
+%\usepackage{solarized-light}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\pagestyle{empty}
+
+\def\indented#1{\list{}{}\item[]}
+\let\indented=\endlist
+
+\newcounter{questionCounter}
+\newcounter{partCounter}[questionCounter]
+
+\newenvironment{namedquestion}[1][\arabic{questionCounter}]{%
+    \addtocounter{questionCounter}{1}%
+    \setcounter{partCounter}{0}%
+    \vspace{.2in}%
+        \noindent{\bf #1}%
+    \vspace{0.3em} \hrule \vspace{.1in}%
+}{}
+
+\newenvironment{numedquestion}[0]{%
+	\stepcounter{questionCounter}%
+    \vspace{.2in}%
+        \ifx\writtensection\undefined
+        \noindent{\bf \questiontype \; \arabic{questionCounter}. }%
+        \else
+          \if\writtensection0
+          \noindent{\bf \questiontype \; \arabic{questionCounter}. }%
+          \else
+          \noindent{\bf \questiontype \; \writtensection.\arabic{questionCounter} }%
+        \fi
+    \vspace{0.3em} \hrule \vspace{.1in}%
+}{}
+
+\newenvironment{alphaparts}[0]{%
+  \begin{enumerate}[label=\textbf{(\alph*)}]
+}{\end{enumerate}}
+
+\newenvironment{arabicparts}[0]{%
+  \begin{enumerate}[label=\textbf{\arabic{questionCounter}.\arabic*})]
+}{\end{enumerate}}
+
+\newenvironment{questionpart}[0]{%
+  \item
+}{}
+
+\newcommand{\answerbox}[1]{
+\begin{framed}
+\vspace{#1}
+\end{framed}}
+
+\pagestyle{head}
+
+\headrule
+\header{\textbf{\mylecture\mysection}}%
+{\textbf{\myname\ (\myemail)}}%
+{\textbf{\myhwtype\ \myhwnum}}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+   {\Large \myclass{} \myhwtype{} \myhwnum} \\
+  \myname{} \\
+  25th of May, 2022
+\end{center}
+
+%Condition 1
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  \underset_{i \in N} X_{i j} \leqslant 
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}\renewcommand{\questiontype}{Condition}
+
+%Condition 2
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 3
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 4
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 5
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 6
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 7
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 8
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%Condition 9
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+%COndition 10
+\renewcommand{\questiontype}{Condition}
+\begin{numedquestion}
+  
+\end{numedquestion}
+\renewcommand{\questiontype}{Question}
+
+
+\end{document}
